@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", Roboto, Helvetica, "Helvetica Neue", "San Francisco";
+}
+
+ body {
+     height: 100vh;
+ }
+
+.header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header button:hover {
+    cursor: pointer;
+}
+
+.header img {
+    width: 100%;
+    height: 100%;
+}
+
+.logo-btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background: white;
+}
+
+.sign {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sign button {
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    background: #10ceab;
+}
+
+.container {
+    width: 100%;
+    height: 45%;
+    position: relative;
+}
+
+.banner {
+    background: #10ceab;
+    width: 100%;
+    height: 100%;
+    opacity: 80%;
+    position:absolute;
+    z-index: 2;
+}
+.background img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    opacity: 20%;
+    z-index: 1;
+}
+.welcome {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    color: white;
+    z-index: 3;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.title {
+    font-size: 50px;
+    font-weight: bold;
+}
+.info {
+    width: 100%;
+    height: 25%;
+    position: relative;
+    background: white;
+}
