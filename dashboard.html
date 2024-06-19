@@ -7,7 +7,6 @@
     <script src="https://kit.fontawesome.com/fbbb6d55bb.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="wrapper">
     <!-- Sidebar  -->
     <div class="iq-sidebar">
         <div class="iq-sidebar-logo">
@@ -17,24 +16,66 @@
         </div>
         <div class="add-wallet">
             <button class="add-wallet-btn">
-                <a href="" class="add-effect"><i class="fa-solid fa-plus"></i> Tạo ví mới</a>
+                <a href="" class="add-effect"><i class="fa-solid fa-plus"></i> Giao dịch mới</a>
             </button>
         </div>
+        <div class="sidebar-menu">
         <div>
             <button class="menu-btn"><a class="link-home"><i class="fa-solid fa-house" style="padding-right: 20px"></i> <span>Trang chủ</span></a></button>
         </div>
         <div>
-            <button class="menu-btn"><a class="link-home"><i class="fa-solid fa-wallet" style="padding-right: 20px"></i> <span>Ví của tôi</span></a></button>
+            <button class="menu-btn"><a class="link-home"><i class="fa-solid fa-wallet" style="padding-right: 20px"></i> <span>Báo cáo chi tiêu</span></a></button>
         </div>
-
-
-            <li>
-                <a href="#userinfo" class="iq-waves-effect" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><i class="las la-user-tie iq-arrow-left"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-            </li>
-        </ul>
-    </nav>
+        <div>
+            <button class="menu-btn"><a class="link-home"><i class="fa-solid fa-file-invoice" style="padding-right: 20px"></i> <span>Ngân sách</span></a></button>
+        </div>
+        <div>
+            <button class="menu-btn"><a class="link-home"><i class="fa-solid fa-user" style="padding-right: 20px"></i> <span>Tài khoản</span></a></button>
+        </div>
+            <div>
+                <button class="menu-btn"><a class="link-home"><i class="fa-solid fa-gear" style="padding-right: 20px"></i> <span>Cài đặt</span></a></button>
+            </div>
+            <div>
+                <button class="menu-btn"><a class="link-home"><i class="fa-solid fa-question" style="padding-right: 20px"></i> <span>Liên hệ</span></a></button>
+            </div>
+        </div>
 </div>
+
+    <!-- Wallet  -->
+<div class="overview">
+        <div class="header-info">
+            <div class="user">
+            <i class="fa-solid fa-bell"></i>
+            <span>Phạm Quý Lộc</span>
+            <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    <div class="total-balance">
+        <div class="balance">
+            <div class="total-value">
+                <span id="total-value"></span>
+                <button class="eye" onclick="hideBalance()"><i class="fa-solid fa-eye"></i></button>
+                <button class="eyeslash"><i class="fa-solid fa-eye-slash"></i></button>
+            </div>
+            <div class="balance-note">
+            <span >Tổng số dư <i class="fa-solid fa-question"></i></span>
+            </div>
+        </div>
     </div>
+    <div class="my-wallet">
+
+    </div>
+    <div class="info2">
+        Báo cáo chi tiêu
+
+    </div>
+    <div class="chart">
+        <div class="choose-period">
+
+        </div>
+    </div>
+
 </div>
+<script src="js/dashboard.js"></script>
 </body>
 </html>
