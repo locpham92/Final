@@ -5,6 +5,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="css/dashboard.css">
     <script src="https://kit.fontawesome.com/fbbb6d55bb.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <!-- Sidebar  -->
@@ -47,9 +48,26 @@
             <div class="user">
             <i class="fa-solid fa-bell"></i>
             <span>Phạm Quý Lộc</span>
-            <i class="fa-solid fa-bars"></i>
+            <button class="usermenu" onclick="showProfile()"><img src="img/none_avatar.jpg"></button>
             </div>
         </div>
+    <div class="profile">
+        <button class="closeprofile" onclick="closeProfile()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="info4">
+            <span>Phạm Quý Lộc</span>
+            <button class="profilemenu"><img src="img/none_avatar.jpg"></button>
+            <button class="userstatus">Free</button>
+            <button class="userdetail">Xem chi tiết tài khoản</button>
+        </div>
+        <div class="logout">
+            <button class="logout-btn">
+                <i class="fa-solid fa-right-from-bracket"></i> LOGOUT
+            </button>
+        </div>
+    </div>
+
     <div class="total-balance">
         <div class="balance">
             <div class="total-value">
@@ -63,18 +81,27 @@
         </div>
     </div>
     <div class="my-wallet">
-
+        <div><span>Ví của tôi</span>
+            <button class="detail1"><span>Xem các ví</span></button>
+        </div>
+        <div><i class="fa-solid fa-wallet" style="padding: 20px"></i></div>
     </div>
     <div class="info2">
         Báo cáo chi tiêu
-
+    </div>
+    <div class="info3">
+        Báo cáo chi tiết
     </div>
     <div class="chart">
         <div class="choose-period">
-
+            <div class="period">
+                <button class="day-btn" onclick="dayChart()">Theo ngày</button>
+                <button class="month-btn" onclick="monthChart()">Theo tuần</button>
+                <button class="year-btn" onclick="yearChart()">Theo tháng</button>
+            </div>
         </div>
+        <canvas id="myBarChart" width="400" height="120" class="myChart"></canvas>
     </div>
-
 </div>
 <script src="js/dashboard.js"></script>
 </body>
