@@ -11,14 +11,13 @@ function closeProfile() {
     let profile = document.querySelector(".profile");
     profile.style.display = 'none';
 }
-
 function dayChart() {
     let dayChart = document.querySelector(".day-btn");
     dayChart.style = 'background-color: #fdfdfd';
+    let weekChart = document.querySelector(".week-btn");
+    weekChart.style = 'background-color: transparent';
     let monthChart = document.querySelector(".month-btn");
     monthChart.style = 'background-color: transparent';
-    let yearChart = document.querySelector(".year-btn");
-    yearChart.style = 'background-color: transparent';
     let chart = document.getElementById('myBarChart').getContext('2d');
     let myBarChart = new Chart(chart, {
         type: 'bar',
@@ -26,7 +25,37 @@ function dayChart() {
             labels: ['01', '02', '03', '04', '05', '06', '07'],
             datasets: [{
                 label: 'Chi phí',
-                data: [12, 19, 3, 5, 2, 3, 7],
+                data: [1, 2, 3,4, 5, 6, 7],
+                backgroundColor: 'rgba(75, 192, 192, 0.9)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
+function weekChart() {
+    myBarChart.destroy();
+    let dayChart = document.querySelector(".day-btn");
+    dayChart.style = 'background-color: transparent';
+    let weekChart = document.querySelector(".week-btn");
+    weekChart.style = 'background-color: #fdfdfd';
+    let monthChart = document.querySelector(".month-btn");
+    monthChart.style = 'background-color: transparent';
+    let chart = document.getElementById('myBarChart').getContext('2d');
+    let myBarChart = new Chart(chart, {
+        type: 'bar',
+        data: {
+            labels: ['W1', 'W2', 'W3', 'W4', 'W5', 'W6', 'W7'],
+            datasets: [{
+                label: 'Chi phí',
+                data: [1, 2, 3,4, 5, 6, 7],
                 backgroundColor: 'rgba(75, 192, 192, 0.9)',
                 borderColor: 'rgba(75, 192, 192, 1)',
                 borderWidth: 1
@@ -44,39 +73,10 @@ function dayChart() {
 function monthChart() {
     let dayChart = document.querySelector(".day-btn");
     dayChart.style = 'background-color: transparent';
+    let weekChart = document.querySelector(".week-btn");
+    weekChart.style = 'background-color: transparent';
     let monthChart = document.querySelector(".month-btn");
     monthChart.style = 'background-color: #fdfdfd';
-    let yearChart = document.querySelector(".year-btn");
-    yearChart.style = 'background-color: transparent';
-    let chart = document.getElementById('myBarChart').getContext('2d');
-    let myBarChart = new Chart(chart, {
-        type: 'bar',
-        data: {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-            datasets: [{
-                label: 'Chi phí',
-                data: [12, 19, 3, 5, 2, 3, 7],
-                backgroundColor: 'rgba(75, 192, 192, 0.9)',
-                borderColor: 'rgba(75, 192, 192, 1)',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-}
-function yearChart() {
-    let dayChart = document.querySelector(".day-btn");
-    dayChart.style = 'background-color: transparent';
-    let monthChart = document.querySelector(".month-btn");
-    monthChart.style = 'background-color: transparent';
-    let yearChart = document.querySelector(".year-btn");
-    yearChart.style = 'background-color: #fdfdfd';
     let chart = document.getElementById('myBarChart').getContext('2d');
     let myBarChart = new Chart(chart, {
         type: 'bar',
@@ -84,7 +84,7 @@ function yearChart() {
             labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024'],
             datasets: [{
                 label: 'Chi phí',
-                data: [12, 19, 3, 5, 2, 3, 7],
+                data: [1, 2, 3,4, 5, 6, 7],
                 backgroundColor: 'rgba(75, 192, 192, 0.9)',
                 borderColor: 'rgba(75, 192, 192, 1)',
                 borderWidth: 1
